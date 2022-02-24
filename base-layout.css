@@ -1,0 +1,57 @@
+.layout {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 286px 1fr;
+  grid-template-rows: 64px 64px 1fr;
+  grid-template-areas: 
+  "logo    header"
+  "debug   breadcrumbs"
+  "sidebar content"
+}
+
+.layout > * {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo {
+  grid-area: logo;
+  background-color: lightgreen;
+}
+
+.header {
+  grid-area: header;
+  background-color: antiquewhite;
+}
+
+.debug {
+  grid-area: debug;
+  background-color: goldenrod;
+}
+
+.breadcrumbs {
+  grid-area: breadcrumbs;
+  background-color: darkcyan;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: lightslategrey;
+}
+
+.content {
+  grid-area: content;
+  background-color: lightblue;
+  overflow: auto;
+}
+
+/* .long-content {
+  height: 100vh;
+  align-self: flex-start;
+} */
